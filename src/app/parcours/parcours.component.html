@@ -1,1 +1,105 @@
-<h1>parcours works!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Mon parcours :</h1>
+      De la classe préparatoire au master en informatique en passant par l'école d'ingénieur, retrouvez ci-dessous les
+      détails de mon parcours scolaire.
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" id="details">
+      <nav id="spy" class="navbar navbar-light bg-light justify-content-center">
+        <a class="navbar-brand" href="#">Frise -></a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="/parcours#2014">2014-2015</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/parcours#2015">2015-2016</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/parcours#2016">2016-2017</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/parcours#2017">2017-2018</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/parcours#2018">2018-2019</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/parcours#2019">2019-2020</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/parcours#2020">2020-2021</a>
+          </li>
+        </ul>
+      </nav>
+      <div data-spy="scroll" data-target="#spy" data-offset="0" id="spyed">
+        <div *ngFor="let year of years" class="container">
+          <div class="row">
+            <h4 id="{{year.y}}"><span class="year">{{year.class}}</span>{{year.title}}</h4>
+          </div>
+          <div *ngIf=!year.right class="row">
+            <div class="col-3">
+              <a href="{{year.image_link}}"><img src="{{year.image_path}}" alt="{{year.image_alt}}"
+                                                 class="img-fluid"></a>
+            </div>
+            <div class="col">
+              <p>{{year.text}}</p>
+            </div>
+          </div>
+          <div *ngIf=year.right class="row">
+            <div class="col">
+              <p>{{year.text}}</p>
+            </div>
+            <div class="col-3">
+              <a href="{{year.image_link}}"><img src="{{year.image_path}}" alt="{{year.image_alt}}"
+                                                 class="img-fluid"></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--<div data-spy="scroll" data-target="#spy" data-offset="0" id="spyed">
+        <h4 id="2020"><span class="year">2020-2021 : </span>Redoublement</h4>
+        <p></p>
+        <h4 id="2019"><span class="year">2019-2020 : </span>MBA2 Expert SI chez My Digital School</h4>
+        <p></p>
+        <h4 id="2018"><span class="year">2018-2019 : </span>MBA1 Expert SI chez My Digital School</h4>
+        <p></p>
+        <h4 id="2017"><span class="year">2017-2018 : </span>OpenClassrooms</h4>
+        <p></p>
+        <div class="container">
+          <div class="row">
+            <h4 id="2016"><span class="year">2016-2017 : </span>ECAM Rennes, 3e année du cycle d'ingénieur</h4>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <a href="#"><img src="assets/images/ecam.svg" alt="Cliquez pour accéder au site de l'ECAM" class="img-fluid"></a>
+            </div>
+            <div class="col">
+              <p>Après le passage des concours CCP et e3a, mon choix s'est porté sur une école d'ingénieurs généraliste
+                à Ker Lann, un campus d'étudiants situé près de Rennes. Grâce à eux j'ai pu m'initier au langage Java, et
+                ai approfondi mes connaissances dans plein d'autres matières (maths, physique, ondes, chimie, elec, sciences
+                de l'ingénieur etc...).
+                <br>C'est à ce moment précis que j'ai su que je voulais plutôt m'orienter vers l'informatique et le
+                développement. J'ai alors fini ma 3e année et c'est en passant en 4e année d'ECAM que j'ai quitté l'école.
+                Je n'ai aujourd'hui jamais regretté ce choix.
+              </p>
+            </div>
+          </div>
+        </div>
+        <h4 id="2015"><span class="year">2015-2016 : </span>CPGE PSI</h4>
+        <p></p>
+        <h4 id="2014"><span class="year">2014-2015 : </span>CPGE MPSI</h4>
+        <p></p>
+      </div>-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <a routerLink="/presentation"><button class="btn btn-dark"><- Retour à l'accueil</button></a>
+    </div>
+  </div>
+</div>

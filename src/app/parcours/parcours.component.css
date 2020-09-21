@@ -1,0 +1,12 @@
+#spyed{
+  height: 35em;
+  overflow-y: scroll;
+  position: relative;
+}
+.year{
+  color: darkblue;
+}
+#details{
+  margin: 2em;
+  border: 4mm ridge rgba(52, 58, 64, .3);
+}
