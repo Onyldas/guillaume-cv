@@ -40,37 +40,38 @@
 
 
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="card col-8 ">
-      <img src="assets/images/guigui.png" class="card-img-top" alt="Guillaume-photo">
-      <div class="card-body">
-        <h5 class="card-title">Présentation</h5>
-        <p class="card-text">Animé par un désir d'apprendre à créer du contenu numérique sous différentes formes,
-          je me lance dans l'apprentissage de langages web dès le lycée en parallèle de mes études.
-          <br>C'est après avoir gagné en rigueur en classe préparatoire que je me suis lancé dans des études
-          d'ingénieurs.
-          <br>Cependant, soucieux d'en apprendre davantage dans le domaine de l'informatiquen je décide de me
-          réorienter
-          vers des étude plus ciblées.
-          <br>J'ai alors commencé mon parcours diplômant sur OpenClassrooms en tant que développeur d'application
-          Java.
-          <br>Puis, je me suis lancé dans un master en alternance en tant qu'expert SI chez My Digital School et en
-          tant que
-          chef de projet SI chez AgroMousquetaires.
-          <br><br>Je recherche actuellement une autre alternance pour terminer mon master.</p>
-        <a href="#" class="btn btn-dark">Me contacter</a>
-      </div>
+  <div class="row align-items-center">
+    <div class="col-6">
+      <img src="assets/images/guigui.png" class="img-fluid" alt="Guillaume-photo">
+    </div>
+    <div class="col-6">
+      <h5>Présentation : </h5>
+      <p>Animé par un désir d'apprendre à créer du contenu numérique sous différentes formes,
+        je me lance dans l'apprentissage de langages web dès le lycée en parallèle de mes études.
+        <br>C'est après avoir gagné en rigueur en classe préparatoire que je me suis lancé dans des études
+        d'ingénieurs.
+        <br>Cependant, soucieux d'en apprendre davantage dans le domaine de l'informatiquen je décide de me
+        réorienter
+        vers des étude plus ciblées.
+        <br>J'ai alors commencé mon parcours diplômant sur OpenClassrooms en tant que développeur d'application
+        Java.
+        <br>Puis, je me suis lancé dans un master en alternance en tant qu'expert SI chez My Digital School et en
+        tant que
+        chef de projet SI chez AgroMousquetaires.
+        <br><br><strong>Je recherche actuellement une autre alternance pour terminer mon master.</strong><br>
+        <a href="#" class="btn btn-dark" style="margin-top: 1em;">Me contacter</a>
+      </p>
     </div>
   </div>
   <div class="row">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
         <div *ngFor="let card of cards" class="col card text-center">
-          <img src="{{card.link}}" class="card-img-top" alt="{{card.image_alt}}">
+          <img src="{{card.path}}" class="card-img-top" alt="{{card.image_alt}}">
           <div class="card-body">
             <h5 class="card-title">{{card.title}}</h5>
             <p class="card-text">{{card.text}}</p>
-            <a href="#" class="btn btn-dark">En savoir plus !</a>
+            <a routerLink="{{card.link}}"  class="btn btn-dark">En savoir plus !</a>
           </div>
         </div>
       </div>

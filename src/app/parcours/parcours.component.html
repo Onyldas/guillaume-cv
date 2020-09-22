@@ -35,9 +35,9 @@
         </ul>
       </nav>
       <div data-spy="scroll" data-target="#spy" data-offset="0" id="spyed">
-        <div *ngFor="let year of years" class="container">
+        <div *ngFor="let year of years" class="container year">
           <div class="row">
-            <h4 id="{{year.y}}"><span class="year">{{year.class}}</span>{{year.title}}</h4>
+            <h4 id="{{year.y}}"><span class="title">{{year.class}}</span>{{year.title}}</h4>
           </div>
           <div *ngIf=!year.right class="row">
             <div class="col-3">
@@ -98,8 +98,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-3">
+    <div class="col-2">
       <a routerLink="/presentation"><button class="btn btn-dark"><- Retour à l'accueil</button></a>
+    </div>
+    <div class="col-2 offset-8">
+      <a routerLink="/competences"><button class="btn btn-dark">Mes compétences -></button></a>
     </div>
   </div>
 </div>

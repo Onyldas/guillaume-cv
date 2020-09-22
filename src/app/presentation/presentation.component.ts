@@ -10,21 +10,24 @@ export class PresentationComponent implements OnInit {
   cards = [
     {
       title: "Mon parcours",
-      text: "Lorem ipsum dolor sit amet",
-      link: "assets/images/graduation.png",
-      image_alt: "graduation"
+      text: "Mon parcours scolaire de la classe préparatoire au master.",
+      path: "assets/images/graduation.png",
+      image_alt: "graduation",
+      link: "/parcours"
     },
     {
       title: "Mes compétences",
-      text: "Lorem ipsum dolor sit amet",
-      link: "assets/images/skills.png",
-      image_alt: "skills"
+      text: "Les différentes compétences que j'ai acquises au fil des années.",
+      path: "assets/images/skills.png",
+      image_alt: "skills",
+      link: "/competences"
     },
     {
       title: "Mes expériences",
-      text: "Lorem ipsum dolor sit amet",
-      link: "assets/images/experiences.png",
-      image_alt: "experiences"
+      text: "Les différentes expériences en entreprise et personnelles.",
+      path: "assets/images/experiences.png",
+      image_alt: "experiences",
+      link: "/experiences"
     }
   ]
 

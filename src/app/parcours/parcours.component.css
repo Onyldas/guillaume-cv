@@ -3,10 +3,18 @@
   overflow-y: scroll;
   position: relative;
 }
-.year{
+.title{
   color: darkblue;
 }
 #details{
   margin: 2em;
   border: 4mm ridge rgba(52, 58, 64, .3);
+}
+.year{
+  margin-bottom: 2em;
+}
+.nav-link{
+  text-decoration: none;
+  font-weight: bold;
+  color: darkblue;
 }
